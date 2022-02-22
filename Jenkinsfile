@@ -13,13 +13,13 @@ pipeline{
     }
     stage('Build Code'){
       steps{
-        mvn clean
+        bat 'mvn clean'
         bat 'echo code is build successfully'
       }
     }
     stage('Run Automated Tests'){
       steps{
-        mvn test
+        bat 'mvn test'
         bat 'echo automated tests ran successfully'
       }
     }
