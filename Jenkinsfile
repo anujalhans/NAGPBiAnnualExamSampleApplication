@@ -23,8 +23,20 @@ pipeline{
         bat 'echo automated tests ran successfully'
       }
     }
-   
-  
+    stage('Sonar Analysis'){
+      steps{
+        withSonarQubeEnv('SonarQube'){
+          withMaven(maven:'MAVEN'){
+             bat 'mvn clean package sonar:sonar'
+          }
+        }
+      }
+    }
+  }
+  post{
+    success{
+      bat 'echo pipeline is sucessful'
+    }
   }
 
 }
