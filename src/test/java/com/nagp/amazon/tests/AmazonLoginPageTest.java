@@ -52,23 +52,28 @@ public class AmazonLoginPageTest extends TestBase {
 		ExtentListener.test.log(Status.INFO, "Test completed  for openLoginScreenTest");
 	}
 
-	@Test(priority = 2, groups = { "Regression" })
-	public void conditionsOfUseTest() {
-		ExtentListener.test.log(Status.INFO, "Test started  for conditionsOfUseTest");
-		String conditionsOfUseTitle = amazonLoginPage.validateConditionsOfUse();
-		Assert.assertEquals(conditionsOfUseTitle, "Amazon.in Help: Conditions of Use",
-				"Conditions Page Title does not match");
-		ExtentListener.test.log(Status.INFO, "Test completed  for conditionsOfUseTest");
-	}
+	/*
+	 * @Test(priority = 2, groups = { "Regression" }) public void
+	 * conditionsOfUseTest() { ExtentListener.test.log(Status.INFO,
+	 * "Test started  for conditionsOfUseTest"); String conditionsOfUseTitle =
+	 * amazonLoginPage.validateConditionsOfUse();
+	 * Assert.assertEquals(conditionsOfUseTitle,
+	 * "Amazon.in Help: Conditions of Use", "Conditions Page Title does not match");
+	 * ExtentListener.test.log(Status.INFO,
+	 * "Test completed  for conditionsOfUseTest"); }
+	 */
 
-	@Test(priority = 3, groups = { "Regression" })
-	public void privacyNoticeTest() {
-		ExtentListener.test.log(Status.INFO, "Test started  for privacyNoticeTest");
-		String privacyNoticeTitle = amazonLoginPage.validatePrivacyNotice();
-		Assert.assertEquals(privacyNoticeTitle, "Amazon.in Help: Amazon.in Privacy Notice",
-				"Privacy Notice Page Title does not match");
-		ExtentListener.test.log(Status.INFO, "Test completed  for privacyNoticeTest");
-	}
+	/*
+	 * @Test(priority = 3, groups = { "Regression" }) public void
+	 * privacyNoticeTest() { ExtentListener.test.log(Status.INFO,
+	 * "Test started  for privacyNoticeTest"); String privacyNoticeTitle =
+	 * amazonLoginPage.validatePrivacyNotice();
+	 * Assert.assertEquals(privacyNoticeTitle,
+	 * "Amazon.in Help: Amazon.in Privacy Notice",
+	 * "Privacy Notice Page Title does not match");
+	 * ExtentListener.test.log(Status.INFO,
+	 * "Test completed  for privacyNoticeTest"); }
+	 */
 
 	@Test(priority = 4, groups = { "Smoke", "Regression" })
 	public void loginTest() {
